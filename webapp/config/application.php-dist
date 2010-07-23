@@ -1,0 +1,11 @@
+<?php
+
+// Base Directory
+define('BASE_DIR', '/www/wedding');
+
+// Propel Installation
+define('PROPEL_INSTALL', BASE_DIR . '/lib/modus/propel/classes');
+
+
+// Model Files
+define('PROPEL_MODEL', BASE_DIR . '/webapp');
