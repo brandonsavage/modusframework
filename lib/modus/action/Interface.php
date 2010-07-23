@@ -1,6 +1,6 @@
 <?php
 
-interface ActionI
+interface Action_Interface
 {
 
 	public function setRequest(RequestI $request);

@@ -1,6 +1,6 @@
 <?php
 
-class WebResponseFormatter implements FormatterI
+class Formatter_WebResponse implements Formatter_Interface
 {
 	protected $request;
 	

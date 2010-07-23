@@ -1,6 +1,6 @@
 <?php
 
-class WebRequest extends Request
+class Request_Web extends Request
 {
 	protected $addlData;
 	

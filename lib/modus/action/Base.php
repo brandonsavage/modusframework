@@ -1,8 +1,7 @@
 <?php
 
-require 'ActionI.php';
 
-abstract class BaseAction implements ActionI
+abstract class Action_Base implements Action_Interface
 {
 	protected $request;
 	protected $response;

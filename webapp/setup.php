@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../lib/modus/config/Config.php';
+require_once '../../lib/modus/Config.php';
 require_once '../../lib/modus/Modus.php';
 
 Config::readConfigFile('../config/application.php');

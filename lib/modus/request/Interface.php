@@ -1,6 +1,6 @@
 <?php
 
-interface RequestI
+interface Request_Interface
 {
 	const STRING = 'string';
 	const INT = 'int';

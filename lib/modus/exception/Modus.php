@@ -1,6 +1,6 @@
 <?php
 
-class ModusException extends Exception
+class Exception_Modus extends Exception
 {
 	
 	protected $userMessage;

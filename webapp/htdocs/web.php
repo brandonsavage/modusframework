@@ -2,13 +2,13 @@
 
 require_once('../setup.php');
 
-$session = ModusSession::getSession();
+$session = Session::getSession();
 
-$request = new WebRequest();
-$response = new GenericResponse;
+$request = new Request_Web();
+$response = new Response_Generic;
 
-$controller = new WebController($request);
-$controller->setResponseFormatter(new WebResponseFormatter);
+$controller = new Controller_Web($request);
+$controller->setResponseFormatter(new Formatter_WebResponse);
 $controller->setResponse($response);
 
 $response->setDefaultView(Config::get('defaultView'));

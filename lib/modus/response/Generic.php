@@ -1,6 +1,6 @@
 <?php
 
-class GenericResponse implements ResponseI
+class Response_Generic implements Response_Interface
 {
 	protected $headers = array();
 	protected $view;

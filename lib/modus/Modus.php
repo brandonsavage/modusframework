@@ -11,16 +11,16 @@ abstract class Modus
 	
 	public static $hooks = array();
 	
-	public static function autoload($className)
+	public static function oldAutoload($className)
 	{
 	   if(empty(self::$files))
 	   {
-	   	  $frameworkLib = include 'lib/manifest.php';
+	   	  //$frameworkLib = include 'lib/manifest.php';
 	   	  $applicationLib = include 'webapp/manifest.php';
 	   	  
-	   	  $files = array_merge($frameworkLib, $applicationLib);
+	   	  //$files = array_merge($frameworkLib, $applicationLib);
 	   	  
-	   	  self::$files = $files;
+	   	  self::$files = $applicationLib;
 	   }
 	   else
 	   {
@@ -32,10 +32,30 @@ abstract class Modus
 		require_once $files[$className];
 		}
 	}
+
+  public static function newAutoload($className)
+  {
+    //var_dump($className); die;
+    $fileParts = explode('_', $className);
+    if(count($fileParts) > 1) {
+      $fileName = array_pop($fileParts);
+      $path = null;
+      foreach($fileParts as $part) {
+        $part = strtolower($part);
+        $path .= $part . '/';
+      }
+    } else {
+      $fileName = array_pop($fileParts);
+      $path = null;
+    }
+   // var_dump('modus/' . $path . $fileName . '.php');
+    require 'modus/' . $path . $fileName . '.php';
+  }
 	
     public static function setAutoloader()
     {
-    	spl_autoload_register(array('Modus', 'autoload'));
+    	spl_autoload_register(array('Modus', 'oldAutoload'));
+      spl_autoload_register(array('Modus', 'newAutoload'));
     }
 	
 	public static function setIncludePath($includePath, $modelRuntime, $modelPath)

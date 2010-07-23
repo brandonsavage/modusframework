@@ -1,6 +1,6 @@
 <?php
 
-class ModusSession
+class Session
 {
 	
 	protected $sessionData = array();
@@ -26,13 +26,13 @@ class ModusSession
 	
 	public static function getSession()
 	{
-		if(is_object(self::$session) && (self::$session instanceof ModusSession))
+		if(is_object(self::$session) && (self::$session instanceof Session))
 		{
 			$session = self::$session;
 		}
 		else
 		{
-			$session = new ModusSession();
+			$session = new Session();
 			self::$session = $session;
 		}
 		

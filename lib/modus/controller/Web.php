@@ -1,6 +1,6 @@
 <?php
 
-class WebController extends BaseController
+class Controller_Web extends Controller_Base
 {
 	public function execute()
 	{

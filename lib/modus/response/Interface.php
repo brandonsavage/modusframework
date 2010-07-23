@@ -9,7 +9,7 @@
  * 4) Throw an exception and display an error page that the response was malformed.
  */
 
-interface ResponseI
+interface Response_Interface
 {
 	public function setHeader($header, $data);
 	

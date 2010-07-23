@@ -1,6 +1,6 @@
 <?php
 
-class Request implements RequestI
+class Request implements Request_Interface
 {
 	protected $processedData = array();
 	

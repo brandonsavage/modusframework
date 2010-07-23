@@ -1,6 +1,6 @@
 <?php
 
-interface ControllerI
+interface Controller_Interface
 {
 
 	/**
@@ -9,7 +9,7 @@ interface ControllerI
 	 * @param RequestI $request The request object for this request.
 	 * @return void
 	 */
-	public function __construct(RequestI $request);
+	public function __construct(Request_Interface $request);
 	
 	/**
 	 * Initialize the controller and prepare it to execute the action.
@@ -39,7 +39,7 @@ interface ControllerI
 	 */
 	public function authenticate();
 	
-	public function setResponseFormatter(FormatterI $rformat);
+	public function setResponseFormatter(Formatter_Interface $rformat);
 	
 	public function getResponseFormatter();
 
