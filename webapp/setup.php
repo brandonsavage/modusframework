@@ -1,9 +1,11 @@
 <?php
 
-require_once '../config/application.php';
+require_once '../../lib/modus/config/Config.php';
 require_once '../../lib/modus/Modus.php';
 
-Modus::setIncludePath(BASE_DIR, PROPEL_INSTALL, PROPEL_MODEL);
+Config::readConfigFile('../config/application.php');
+
+Modus::setIncludePath(Config::get('basedir'), Config::get('propel/install'), Config::get('propel/model'));
 Modus::setAutoloader();
 
-Propel::init(BASE_DIR . '/webapp/config/model-conf.php');
+//Propel::init(Config::get('basedir') . '/webapp/config/model-conf.php');

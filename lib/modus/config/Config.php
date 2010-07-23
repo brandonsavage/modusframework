@@ -34,6 +34,8 @@ abstract class Config
 		{
 			if(!isset($storedVals[$value]))
 			{
+				var_dump($storedVals);
+				var_dump($value);
 				trigger_error('The value you requested was not found.', E_USER_WARNING);
 				return;
 			}

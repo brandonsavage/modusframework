@@ -1,0 +1,7 @@
+        RewriteEngine on
+
+        RewriteRule ^/$ /web/user/login [R]
+        RewriteRule ^/(.*)/$ /$1 [R]
+        RewriteRule ^/(.*)/(.*)/(.*)/([0-9]+)/?(.*)?$ /$1.php?module=$2&action=$3&record=$4&addlData=$5
+#       RewriteRule ^/(.*)/(.*)/(.*)/([0-9]+)/?$ /$1.php?module=$2&action=$3&record=$4
+        RewriteRule ^/(.*)/(.*)/(.*)$ /$1.php?module=$2&action=$3

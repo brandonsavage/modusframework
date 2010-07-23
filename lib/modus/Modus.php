@@ -16,7 +16,7 @@ abstract class Modus
 	   if(empty(self::$files))
 	   {
 	   	  $frameworkLib = include 'lib/manifest.php';
-	   	  $applicationLib = include'webapp/manifest.php';
+	   	  $applicationLib = include 'webapp/manifest.php';
 	   	  
 	   	  $files = array_merge($frameworkLib, $applicationLib);
 	   	  
