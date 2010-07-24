@@ -8,9 +8,7 @@ interface Request_Interface
 	const FLOAT = 'float';
 	const ARR = 'array';
 	const OBJECT = 'object';
-	
-	public function __construct();
-	
+		
 	public function get($data);
 	
 	public function set($k, $v);
